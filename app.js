@@ -9,16 +9,16 @@ app.use(express.static('public'));
 
 // Main, error and success views
 app.get('/', function (request, response) {
-  response.sendFile(__dirname + '/public/index.html');
+  response.sendFile(__dirname + '/public/index');
 });
 
-app.get("/success", function (request, response) {
-  response.sendFile(__dirname + '/public/success.html');
-});
+// app.get("/success", function (request, response) {
+//   response.sendFile(__dirname + '/public/success.html');
+// });
 
-app.get("/error", function (request, response) {
-  response.sendFile(__dirname + '/public/error.html');
-});
+// app.get("/error", function (request, response) {
+//   response.sendFile(__dirname + '/public/error.html');
+// });
 
 
 
