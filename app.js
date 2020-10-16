@@ -20,6 +20,15 @@ app.get('/', function (request, response) {
 //   response.sendFile(__dirname + '/public/error.html');
 // });
 
+ // cors origin URL - Allow inbound traffic from origin
+ corsOptions = {
+  origin: "https://dashboard.heroku.com",
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+};
+app.use(cors(corsOptions));
+
+
+
 
 
 app.listen(3000, function () {
