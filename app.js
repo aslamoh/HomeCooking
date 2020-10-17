@@ -4,17 +4,16 @@ const app = express();
 
 
 // // Views in public directory
-// app.use(express.static('public'));
+ app.use(express.static('public'));
 
 // Main, error and success views
+ app.get('/', function (request, response) {
+  response.sendFile(__dirname + '/public/index');
+ });
+
 // app.get('/', function (request, response) {
-//   response.sendFile(__dirname + '/public/index');
-// });
-
-app.get('/', function (request, response) {
-  response.send('welcome to.....');
-});
-
+//   response.send('welcome to.....');
+// })
 
 
 
@@ -30,7 +29,9 @@ app.get('/', function (request, response) {
 
 
 
+/// start up server
+const PORT = process.env.PORT || 3000;
 
-app.listen(3000, function () {
-  console.log('Server listening on port 3000.');
+app.listen(PORT, function() {
+	console.log(`Listening on port ${PORT}`);
 });
