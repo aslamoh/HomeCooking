@@ -3,15 +3,17 @@ const express = require('express');
 const app = express();
 
 
-// Views in public directory
-app.use(express.static('public'));
+// // Views in public directory
+// app.use(express.static('public'));
 
 // Main, error and success views
+// app.get('/', function (request, response) {
+//   response.sendFile(__dirname + '/public/index');
+// });
+
 app.get('/', function (request, response) {
-  response.sendFile(__dirname + '/public/index');
+  response.send('welcome to.....');
 });
-
-
 
 
 
