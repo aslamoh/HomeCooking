@@ -23,7 +23,9 @@ app.get('/pricing', function(request, response) {
 	response.render('pricing', {});
 });
 
-
+app.get('/gallery', function(request, response) {
+	response.render('gallery', {});
+});
 
 
 
